@@ -28,9 +28,10 @@
 ## relevent technologies
 
 ### front End：
-- Basic Framwork：vue3(前台) vue2(后台)
+- Basic Framwork：vue3
 - Routing       ：vue-router
 - Net Request   ：axios
+- Web Server    ：Nginx
 - Others        ：see package.json
 
 
