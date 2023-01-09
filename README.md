@@ -21,9 +21,10 @@
 
 ## Live Demo
 
-- Vistor Page   ：
-- Management    ：
-- Vistor Account：
+- Vistor Page   ：http://18.188.250.203
+- Management    ：http://18.188.250.203:8090/login
+- Vistor Account：18766666666
+- Vistor Password:admin123
 
 ## relevent technologies
 
