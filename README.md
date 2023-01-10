@@ -43,4 +43,6 @@
 ## Deploy
 
 - Detail see Documents
+<p align="center">
 <img src="https://octodex.github.com/images/daftpunktocat-guy.gif" alt="Blog · Logo" style="width: 400px; height: 350px">
+</p>
