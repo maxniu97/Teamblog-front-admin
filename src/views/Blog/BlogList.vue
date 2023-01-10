@@ -29,7 +29,7 @@
               </el-form-item>
             </el-col>
             <el-col :span="4">
-              <el-form-item label="Category"
+              <el-form-item label=""
                             prop="categoryId">
                 <el-select v-model="searchFormData.categoryId"
                            clearable

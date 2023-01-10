@@ -15,9 +15,14 @@
   </template>
   
   <script setup>
+
   import '@wangeditor/editor/dist/css/style.css' // 引入 css
   import { onBeforeUnmount, ref, shallowRef } from 'vue'
   import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
+  import { i18nChangeLanguage } from '@wangeditor/editor'
+
+// 切换语言 - 'en' 或者 'zh-CN'
+  i18nChangeLanguage('en')
   
   const props = defineProps({
     modelValue: {

@@ -30,10 +30,10 @@
 - Visitor Account  ：18766666666
 - Visitor Password  : test123
 
-## relevent technologies
+## relevant technologies
 
 ### front End：
-- Basic Framwork：vue3
+- Basic Framework：vue3
 - Routing       ：vue-router
 - Net Request   ：axios
 - Web Server    ：Nginx
