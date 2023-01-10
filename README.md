@@ -11,7 +11,7 @@
 	<img src="https://img.shields.io/badge/SpringBoot-2.2.7.RELEASE-brightgreen">
 	<img src="https://img.shields.io/badge/Vue-2.6.11-brightgreen">
     	<img src="https://img.shields.io/badge/Nginx-1.22.1-brightgreen">
-
+	<img src="https://img.shields.io/badge/Element-Plus-green">
 </p>
 
 
