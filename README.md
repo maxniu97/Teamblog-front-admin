@@ -1,3 +1,6 @@
+# TeamBlog---A front-end and backend separated blog management system.
+
+
 <p align="center">
 	<a href="" target="_blank">
 		<img src="https://cdn.jsdelivr.net/gh/rawchen/JsDelivr/static/blog/favicon-gif.gif" alt="Blog · Logo" style="width: 200px; height: 200px">
@@ -13,7 +16,7 @@
 
 
 
-# TeamBlog---A front-end and backend separated blog management system.
+
 
 ## Thanks you
 
