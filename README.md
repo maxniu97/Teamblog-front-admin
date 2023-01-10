@@ -21,10 +21,10 @@
 
 ## Live Demo
 
-- Vistor Page   ：http://18.188.250.203
+- Visitor Page   ：http://18.188.250.203
 - Management    ：http://18.188.250.203:8090/login
-- Vistor Account：18766666666
-- Vistor Password:test123
+- Visitor Account：18766666666
+- Visitor Password:test123
 
 ## relevent technologies
 
