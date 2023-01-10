@@ -25,7 +25,7 @@
 ## Live Demo
 
 - Visitor Page   ：www.teamblog.ca
-- Management    ：admin.teamblog.ca
+- Management     ：admin.teamblog.ca
 - Visitor Account：18766666666
 - Visitor Password:test123
 
