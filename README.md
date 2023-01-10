@@ -24,8 +24,8 @@
 
 ## Live Demo
 
-- Visitor Page   ：http://18.188.250.203
-- Management    ：http://18.188.250.203:8090/login
+- Visitor Page   ：www.teamblog.ca
+- Management    ：admin.teamblog.ca
 - Visitor Account：18766666666
 - Visitor Password:test123
 
