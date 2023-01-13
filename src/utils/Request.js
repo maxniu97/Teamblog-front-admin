@@ -53,7 +53,7 @@ const request = (config) => {
         }
     )
 
-    //请求后拦截
+    //intercept after request
     instantce.interceptors.response.use(
         (response) => {
             if (showLoading && loading) {

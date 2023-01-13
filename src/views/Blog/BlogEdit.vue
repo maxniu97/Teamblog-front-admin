@@ -1,6 +1,6 @@
 <template>
     <div>
-      <!--新增修改弹窗-->
+      <!--新增修改弹窗 new  editor pop-->
       <Window :show="windowConfig.show"
               :buttons="windowConfig.buttons"
               @close="closeWindow">
@@ -194,7 +194,7 @@ const cleanTimer = () => {
   }
 }
 
-//自动保存
+//auto save
 const autoSave = async () => {
   if (blogFormData.value.title == undefined || blogFormData.value.content == undefined || timmer.value == null || dialogConfig.show) {
     return;
@@ -213,7 +213,7 @@ const autoSave = async () => {
 }
 
 
-//新增,修改
+//add , edit
 const windowConfig = reactive({
   show: false,
   buttons: [{
@@ -236,15 +236,15 @@ const closeWindow = () => {
 
 
 
-//博客正文
+//blog content
 const blogFormRef = ref(null);
 const blogFormData = ref({ tag: [] });
 
-//markdown编辑器设置html内容
+//markdown editor setting html content
 const setHtmlContent = (htmlContent) => {
   blogFormData.value.content = htmlContent
 }
-//第一步提交 展示配置弹窗
+//fist submit show setting dialog
 const showSettings = () => {
   blogFormRef.value.validate(async (valid) => {
     if (!valid) {
@@ -264,7 +264,7 @@ const rules = {
   reprintUrl: [{ required: true, message: "Please Provide Original Post Address" }],
 }
 
-//博客设置
+//blog setting
 const dialogConfig = reactive({
   show: false,
   title: "Blog Settings",
@@ -276,7 +276,7 @@ const dialogConfig = reactive({
     }
   }]
 })
-//博客分类
+//category
 const categoryList = ref([]);
 const loadCategory = async () => {
   let result = await proxy.Request({
@@ -295,18 +295,18 @@ onUnmounted(() => {
   cleanTimer();
 })
 
-//删除标签
+//delete label
 const closeTag = (index) => {
   blogFormData.value.tag.splice(index, 1);
 }
 
-//是否显示tag输入框
+//show tag input prop
 const showTagInput = ref(false)
 
 const showTagInputHandler = () => {
   showTagInput.value = true;
 }
-//tag输入框的值
+//tag inputs
 const tagInputValue = ref(null);
 
 const tagInputResult = (e) => {

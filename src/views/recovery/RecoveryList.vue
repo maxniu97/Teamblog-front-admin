@@ -38,7 +38,7 @@
           </div>
           <div>Author：{{ row.nickName }}</div>
         </template>
-        <!-- 操作 -->
+        <!-- operations -->
         <template #status="{ index, row }">
           <span v-if="row.status == 1"
                 :style="{ color: 'green' }">{{
@@ -148,7 +148,7 @@ const loadDataList = async () => {
   }
   Object.assign(tableData, result.data);
 };
-//删除
+//delete
 const delBlog = (data) => {
   proxy.Confirm(`To Permanent Delete【${data.title}】？`, async () => {
     let result = await proxy.Request({
@@ -165,7 +165,7 @@ const delBlog = (data) => {
   });
 };
 
-//恢复博客
+//restore blog
 const reductionBlog = (data) => {
   proxy.Confirm(
     `To Restore【${data.title}】Back to Draft State?`,

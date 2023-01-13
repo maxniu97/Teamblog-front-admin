@@ -56,30 +56,30 @@
              :dataSource="tableData"
              :fetch="loadDataList"
              :options="tableOptions">
-        <!--封面-->
+        <!--cover-->
         <template #cover="{index,row}">
           <Cover :cover="row.cover"></Cover>
         </template>
-        <!--文章信息-->
+        <!--article info-->
         <template #blogInfo="{index,row}">
           <div>Title：{{row.title}}</div>
           <div>Category：{{row.categoryName}}</div>
           <div>Author：{{row.nickName}}</div>
         </template>
-        <!--类型-->
+        <!--type-->
         <template #typeName="{index,row}">
           <div>Type：<span v-if="row.type==0">Original</span><span v-if="row.type==1">Reproduced</span></div>
           <div v-if="row.type==1">Reference：{{row.reprintUrl}}</div>
         </template>
   
-        <!--类型-->
+        <!--type-->
         <template #statusName="{index,row}">
           <span v-if="row.status==1"
                 :style="{color:'green'}">{{row.statusName}}</span>
           <span v-else
                 :style="{color:'red'}">{{row.statusName}}</span>
         </template>
-        <!--类型-->
+        <!--type-->
         <template #time="{index,row}">
           <div>Created：{{row.createTime}}</div>
           <div>Updated：{{row.lastUpdateTime}}</div>
@@ -131,7 +131,7 @@
     delBlog: "/blog/recoveryBlog"
     }
 
-    //搜索
+    //search
     const searchFormData = reactive({})
     const categoryList = ref([]);
     const loadCategoryList = async () => {
@@ -142,7 +142,7 @@
     }
     loadCategoryList();
 
-    //列表
+    //list
     const columns = [{
     label: "Cover",
     prop: "cover",
@@ -212,7 +212,7 @@
 
 
 
-    //删除博客
+    //delete blog
     const delBlog = (data) => {
     proxy.Confirm(`Delete 【${data.title}】?`, async () => {
         let result = await proxy.Request({
@@ -228,7 +228,7 @@
     })
     }
 
-    //详情
+    //detail
     const blogDetailRef = ref(null);
     const showDetail = (blogId) => {
     blogDetailRef.value.showDetail(blogId);

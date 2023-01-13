@@ -21,9 +21,9 @@
   import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
   import { i18nChangeLanguage } from '@wangeditor/editor'
 
-// 切换语言 - 'en' 或者 'zh-CN'
+// Language support - 'en' or 'zh-CN'
   i18nChangeLanguage('en')
-  
+
   const props = defineProps({
     modelValue: {
       type: String,
@@ -39,7 +39,7 @@
   
   const editorRef = shallowRef()
   
-  // 内容 HTML
+  // Content HTML
   const toolbarConfig = {}
   const editorConfig = {
     placeholder: 'Enter Your Content...', MENU_CONF: {
@@ -59,7 +59,7 @@
     emit("update:modelValue", editor.getHtml());
   }
   
-  // 组件销毁时，也及时销毁编辑器
+  // when destroy component, also destroy editor 
   onBeforeUnmount(() => {
     const editor = editorRef.value
     if (editor == null) return
@@ -67,7 +67,7 @@
   })
   
   const handleCreated = (editor) => {
-    editorRef.value = editor // 记录 editor 实例，重要！
+    editorRef.value = editor // record editor instance，Important！
   }
   </script>
   

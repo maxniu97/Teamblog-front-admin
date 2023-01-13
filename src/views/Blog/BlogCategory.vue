@@ -113,7 +113,7 @@ const loadDataList = async () => {
   tableData.list = result.data;
 }
 
-//新增，修改
+//add, edit
 const dialogConfig = reactive({
   show: false,
   title: "Title",

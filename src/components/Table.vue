@@ -9,18 +9,18 @@
                 highlight-current-row
                 @row-click="handleRowClick"
                 @selection-change="handleSelectionChange">
-        <!--selection选择框-->
+        <!--selection -->
         <el-table-column v-if="options.selectType && options.selectType == 'checkbox'"
                          type="selection"
                          width="50"
                          align="center"></el-table-column>
-        <!--序号-->
+        <!--serial#-->
         <el-table-column v-if="options.showIndex"
                          label="序号"
                          type="index"
                          width="60"
                          align="center"></el-table-column>
-        <!--数据列-->
+        <!--data list-->
         <template v-for="(column, index) in columns">
           <template v-if="column.scopedSlots">
             <el-table-column :key="index"
@@ -47,7 +47,7 @@
           </template>
         </template>
       </el-table>
-      <!-- 分页 -->
+      <!-- page separation -->
       <div class="pagination"
            v-if="showPagination">
         <el-pagination v-if="dataSource.totalCount"
@@ -82,7 +82,7 @@
       },
     },
     columns: Array,
-    fetch: Function, // 获取数据的函数
+    fetch: Function, // get returning function
     initFetch: {
       type: Boolean,
       default: true,
@@ -91,7 +91,7 @@
   
   const radioSelectRowIndex = ref(null);
   
-  //顶部 60 , 内容区域距离顶部 20， 内容上下内间距 15*2  分页区域高度 46
+  //top 60 , content zone from top 20, content separation 15*2  page separation 46
   const topHeight = 60 + 20 + 30 + 46;
   
   const tableHeight = ref(
@@ -102,40 +102,40 @@
   
   const dataTable = ref();
   
-  //行点击
+  // click on row
   const handleRowClick = (row) => {
     emit("rowClick", row);
   };
   
-  //多选
+  // multiple selection
   const handleSelectionChange = (row) => {
     emit("rowSelected", row);
   };
   
-  //切换每页大小
+  //switch page size
   const handlePageSizeChange = (size) => {
     props.dataSource.pageSize = size;
     props.dataSource.pageNo = 1;
     props.fetch();
   };
-  // 切换页码
+  // switch page #
   const handlePageNoChange = (pageNo) => {
     props.dataSource.pageNo = pageNo;
     props.fetch();
   };
-  //设置行选中
+  //select setting row
   const setCurrentRow = (rowKey, rowValue) => {
     let row = props.dataSource.list.find((item) => {
       return item[rowKey] === rowValue;
     });
     dataTable.value.setCurrentRow(row);
   };
-  //将子组件暴露出去，否则父组件无法调用
+  //expose child component, otherwise the parent component can't be used
   defineExpose({
     setCurrentRow,
   });
   
-  //初始化
+  //init
   const init = () => {
     if (props.initFetch && props.fetch) {
       props.fetch();
