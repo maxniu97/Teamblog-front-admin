@@ -114,6 +114,7 @@
   </template>
 
 <script setup>
+
     import { getCurrentInstance, reactive, ref,} from 'vue';
     import BlogEdit from "./BlogEdit.vue"
     import BlogDetail from "./BlogDetail.vue"

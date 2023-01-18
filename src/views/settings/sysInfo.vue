@@ -14,18 +14,7 @@
             </el-radio-group>
           </div>
         </el-form-item>
-        <template v-if="formData.openCommentType==1">
-          <el-form-item label="appId"
-                        prop="changyanAppId">
-            <el-input :maxLength="50"
-                      v-model="formData.changyanAppId" />
-          </el-form-item>
-          <el-form-item label="appKey"
-                        prop="changyanAppKey">
-            <el-input :maxLength="50"
-                      v-model="formData.changyanAppKey" />
-          </el-form-item>
-        </template>
+        
   
         <el-form-item label="Support Git Pages"
                       prop="gitPagesType">
@@ -36,42 +25,8 @@
             </el-radio-group>
           </div>
         </el-form-item>
-        <el-form-item label="ICP Info"
-                      prop="showIcp">
-          <el-radio-group v-model="formData.showIcp">
-            <el-radio :label="1">Yes</el-radio>
-            <el-radio :label="0">No</el-radio>
-          </el-radio-group>
-        </el-form-item>
-        <template v-if="formData.showIcp==1">
-          <el-form-item label="ICP Domain"
-                        prop="icpDomain">
-            <el-input :maxLength="200"
-                      v-model="formData.icpDomain" />
-          </el-form-item>
-          <el-form-item label="ICP Number"
-                        prop="icpNo">
-            <el-input :maxLength="100"
-                      v-model="formData.icpNo" />
-          </el-form-item>
-          <el-form-item label="Province"
-                        prop="policeProvince">
-            <el-select v-model="formData.policeProvince"
-                       clearable
-                       showSearch>
-              <el-option v-for="(item,index) in provinceList"
-                         :label="item"
-                         :value="item"
-                         :key="index">
-              </el-option>
-            </el-select>
-          </el-form-item>
-          <el-form-item label="P number"
-                        prop="policeNo">
-            <el-input :maxLength="100"
-                      v-model="formData.policeNo" />
-          </el-form-item>
-        </template>
+       
+        
   
         <el-form-item label="Download Static Page">
           <div>
@@ -99,18 +54,10 @@ const api = {
 }
 
 const formData = reactive({});
-const provinceList = ["京", "津", "冀", "晋", "蒙", "辽", "吉", "黑", "沪", "苏", "浙", "皖", "闽", "赣", "鲁", "豫", "鄂", "湘", "粤", "桂", "琼", "渝", "川", "黔", "滇", "藏", "陕", "甘", "青", "宁", "新", "台", "港", "澳"]
+const provinceList = []
 
 const rules = {
-  openCommentType: [{ required: true, message: "是否开启评论不能为空" }],
-  changyanAppId: [{ required: true, message: "畅言appId不能为空" }],
-  changyanAppKey: [{ required: true, message: "畅言appKey不能为空" }],
-  gitPagesType: [{ required: true, message: "是否开启Git Pages不能为空" }],
-  showIcp: [{ required: true, message: "是否开启公安备案和ICP备案信息不能为空" }],
-  icpDomain: [{ required: true, message: "ICP备案域名不能为空" }],
-  icpNo: [{ required: true, message: "ICP备案号不能为空" }],
-  policeProvince: [{ required: true, message: "公安备案省份不能为空" }],
-  policeNo: [{ required: true, message: "公安备案号不能为空" }],
+
 }
 
 const getSysSetting = async () => {

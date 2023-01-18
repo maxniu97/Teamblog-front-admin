@@ -91,7 +91,7 @@
         </template>
       </Table>
   
-      <!--新增成员弹窗-->
+      <!--New member dialog-->
       <Dialog :show="editDialogInfo.show"
               :title="editDialogInfo.title"
               :buttons="editDialogInfo.buttons"
@@ -176,7 +176,7 @@
         </el-form>
       </Dialog>
   
-      <!--修改密码-->
+      <!--change password-->
       <Dialog :show="dialogConfig.show"
               :title="dialogConfig.title"
               :buttons="dialogConfig.buttons"
@@ -206,6 +206,7 @@
   </template>
 
 <script setup>
+
 import VueCookies from 'vue-cookies'
 import { getCurrentInstance, reactive, ref, nextTick, } from "vue";
 const { proxy } = getCurrentInstance();
@@ -221,7 +222,7 @@ const userInfo = ref(VueCookies.get("userInfo") || {});
 //const userInfo = ref(proxy.VueCookies.get("userInfo") || {});
 
 const searchFormData = reactive({});
-//列表
+//menu list
 const columns = [{
   label: "Avatar",
   prop: "avatar",
@@ -285,7 +286,7 @@ const loadDataList = async () => {
   tableData.value = result.data;
 }
 
-//新增用户
+//new user
 
 
 const validateRePass = (rule, value, callback) => {
@@ -378,7 +379,7 @@ const submitForm = () => {
   });
 };
 
-//修改状态
+//change status
 const changeAccountStatus = (data) => {
   let status = data.status == 0 ? 1 : 0;
   let statusName = data.status == 0 ? "Activate" : "Ban"
@@ -397,7 +398,7 @@ const changeAccountStatus = (data) => {
   })
 }
 
-//删除
+//delete user
 const delUser = (data) => {
   proxy.Confirm(`To Delete【${data.nickName}】`, async () => {
     let result = await proxy.Request({
@@ -413,9 +414,9 @@ const delUser = (data) => {
   })
 }
 
-//修改密码
 
-//修改密码
+
+//edit password
 const passwordFormRef = ref(null);
 const dialogConfig = reactive({
   show: false,

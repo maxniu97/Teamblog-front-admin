@@ -131,7 +131,7 @@ const columns = [
   },
 ];
 const searchForm = reactive({});
-
+//load the list of blogs
 const loadDataList = async () => {
   let params = {
     pageNo: tableData.pageNo,

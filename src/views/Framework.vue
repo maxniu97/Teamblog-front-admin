@@ -209,7 +209,7 @@
     })
   }
   
-  //监听store
+  //listen to store
   watch(() => store.state.userInfo, (newVal, oldVal) => {
     const avatar = proxy.globalInfo.imageUrl + newVal.avatar;
     const nickName = newVal.nickName;
@@ -219,7 +219,7 @@
   
   
   
-  //发布
+  //publish
   const colors = [
     { color: "#f56c6c", percentage: 20 },
     { color: "#e6a23c", percentage: 40 },
