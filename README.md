@@ -37,6 +37,7 @@
 - Basic Framework：vue3
 - Net Request   ：axios
 - Web Server    ：Nginx
+- UI Lirbary	: ElementPlus
 - Others        ：see package.json
 
 
