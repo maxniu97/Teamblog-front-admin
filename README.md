@@ -35,7 +35,6 @@
 
 ### front End：
 - Basic Framework：vue3
-- Routing       ：vue-router
 - Net Request   ：axios
 - Web Server    ：Nginx
 - Others        ：see package.json
