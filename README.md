@@ -42,7 +42,8 @@
 
 
 ## Deploy
-
+### To install dependencies
+- npm install
 ### To Run
 - npm run dev
 ### To Build
