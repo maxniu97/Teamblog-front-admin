@@ -113,7 +113,7 @@
     </div>
   </template>
 
-<script setup>
+  <script setup>
 
     import { getCurrentInstance, reactive, ref,} from 'vue';
     import BlogEdit from "./BlogEdit.vue"

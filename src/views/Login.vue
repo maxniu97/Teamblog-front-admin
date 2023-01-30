@@ -6,7 +6,7 @@
                :rules="rules"
                ref="formDataRef">
         <el-form-item prop="account">
-          <el-input placeholder="UserName"
+          <el-input placeholder="User Name"
                     v-model="formData.account"
                     size="large">
             <template #prefix>
@@ -39,12 +39,21 @@
         </el-form-item>
         <el-form-item>
           <el-checkbox v-model="formData.rememberMe"
-                       :true-label="1">Remember me</el-checkbox>
+                      :true-label="1" style="color:#524A4A">
+                      <strong> Remember me</strong>
+          </el-checkbox>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary"
+          <el-button
+                     type="primary"
+                    color="#1F618D"
                      :style="{width:'100%'}"
-                     @click="login">GO!</el-button>
+                     @click="login">
+                     <span class="iconfont icon-launch"></span>
+                     <strong>
+                     GO!
+                    </strong>
+                    </el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -151,20 +160,25 @@ const login = () => {
   background-size: cover;
   background-position: center;
   background-image: url(../assets/login-bg.jpg);
+  
   .login-panel {
     margin-top: 150px;
     width: 350px;
     float: right;
     margin-right: 100px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px #ddd;
-
+    border-radius: 10px;
+    backdrop-filter: blur(10px) brightness(120%);
+    z-index: 100;
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.25);
+    
     .login-title {
-      font-size: 25px;
+      font-size: 30px;
       text-align: center;
       margin-bottom: 10px;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+      color: rgb(82, 74, 74);
     }
 
     .check-code-panel {
@@ -180,5 +194,7 @@ const login = () => {
       }
     }
   }
+  
 }
+
 </style>
