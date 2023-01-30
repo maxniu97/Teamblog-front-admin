@@ -35,15 +35,18 @@
 
 ### front End：
 - Basic Framework：vue3
-- Routing       ：vue-router
 - Net Request   ：axios
 - Web Server    ：Nginx
+- UI Lirbary	: ElementPlus
 - Others        ：see package.json
 
 
 ## Deploy
 
-- Detail see Documents
+### To Run
+- npm run dev
+### To Build
+- npm run build
 <p align="center">
 <img src="https://octodex.github.com/images/daftpunktocat-guy.gif" alt="Blog · Logo" style="width: 400px; height: 350px">
 </p>
