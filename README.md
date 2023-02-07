@@ -7,11 +7,9 @@
 	</a>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/badge/JDK-1.8+-orange">
-	<img src="https://img.shields.io/badge/SpringBoot-2.6.1.-brightgreen">
 	<img src="https://img.shields.io/badge/Vue-3.2.41-brightgreen">
+	<img src="https://img.shields.io/badge/VueX-4.1.0+-orange">
 	<img src="https://img.shields.io/badge/Vite-3.2.3-brightgreen">
-    	<img src="https://img.shields.io/badge/Nginx-1.22.1-brightgreen">
 	<img src="https://img.shields.io/badge/Element-Plus-green">
 </p>
 
@@ -35,7 +33,7 @@
 
 ### front End：
 - Basic Framework：vue3
-- Net Request   ：axios
+- Handle Requests   ：axios
 - Web Server    ：Nginx
 - UI Lirbary	: ElementPlus
 - Others        ：see package.json
